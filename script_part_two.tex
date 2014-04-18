@@ -1,7 +1,8 @@
-\documentclass[10pt,a4paper,german]{book}
+\documentclass[12pt,a4paper,german]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
 \usepackage{graphicx}
+\usepackage{subfiles}
 %\usepackage{enumitem}
 \author{Peter Silie}
 \title{	\includegraphics[scale=0.5]{titelbild.png}\\
@@ -21,6 +22,7 @@
 
 \begin{document}
 \maketitle
+\setcounter{tocdepth}{4}
 \tableofcontents
 \newpage
 \paragraph{Vorwort}
@@ -29,14 +31,15 @@ In der Film- und Fernsehwelt erleben wir es wieder und wieder. Teil 2 einer jede
 Dies gilt es hier unter allen Umständen zu vermeiden. Gute Vorarbeit leistete dabei Teil 1, der viele Fragen offen lässt und nur einen kleinen Teil der Krapfenwestern-Welt aufgezeigt hat.
 \chapter{Prolog}
 \section{Ende Teil 1 - Rache ist süß}
+\paragraph{\emph{L}ückenzahn Bill, \emph{S}ack'l Mac Joe.\\}
 Lückenzahn Bill denkt sich in Sicherheit an einem abgelegenen Ort. Er sitzt auf einem rostigen, alten Rohr und will gerade in den erbeuteten Krapfen beissen, da wird er ihm aus der Hand geschossen. Erschrocken springt er hinter das Rohr und blickt sich langsam in der Richtung um, aus der seiner Meinung nach der Schuss gekommen ist. In der Ferne sieht man Sack'l Mac Joe auf ihn zugehen. Lückenzahn Bill springt auf das Rohr.
 
 \begin{verse}
-\textit{\glqq He! Mein Krapfen!\grqq}
+\textbf{L:}\textit{\glqq He! Mein Krapfen!\grqq}
 
 Schneller Schwenk auf das Gesicht von Sack'l Mac Joe.
 
-\textit{\glqq Und jetzt werd ich dir eine Füllung verpassen!\grqq}\\
+\textbf{S:}\textit{\glqq Und jetzt werd ich dir eine Füllung verpassen!\grqq}
 \end{verse}
 
 Er schießt und trifft Lückenzahn Bill, welcher daraufhin zu Boden stürzt. Fade out...
@@ -64,7 +67,7 @@ Am Ende sieht man, dass Lückenzahn Bill nochmals in die Kamera blickt. Es bleib
     \textbf{Tony} fährt in die Stadt um sich einen neuen Hut zu besorgen. Dort angekommen sieht er einen Stecklbrief von Lückenzahn Bill und beschließt ebenfalls ein Kopfgeld auszusetzen, auf \textbf{Sack'l Mac Joe}. Knausrig wie er ist, fällt das Kopfgeld sehr klein aus, weshalb nur ein armer, verrückter Mexikaner namens \textbf{Mexican Kid} darauf anspringt.
 
 \paragraph{Hauptteil.}
-    
+   
 \subparagraph{Haupthandlung}
     \textbf{Sack'l Mac Joe} stellt fest dass er einen Fehler begangen hat, er hat sich einen reichen Gegner geschaffen und keinen Beweis, dass \textbf{Lückenzahn Bill} tot ist. Er kehrt zum Ort des Geschehens zurück, findet aber keine Leiche. So macht er sich erneut auf die Suche nach seinem ersten Kopfgeldauftrag.
 \subparagraph{Nebenhandlung}
@@ -77,14 +80,24 @@ Am Ende sieht man, dass Lückenzahn Bill nochmals in die Kamera blickt. Es bleib
     \textbf{Tony} stellt fest, dass man es auch auf ihn abgesehen hat.
 
 %------------------------------------------------------------------------------
-%Regeln zum Drehbuch:
+% Regeln zum Drehbuch:
 %
 %    Keine Beischreibung der Charaktere
 %    Keine Hintergrundgeschichte
 %    Nichts was der Zuschauer nicht auch sehen kann
 %
-%Das Drehbuch enthält den reinen Szenenaufbau und -Ablauf sowie die Dialoge der Charaktere.
+% Das Drehbuch enthält den reinen Szenenaufbau und -Ablauf sowie die Dialoge der Charaktere.
+%
+% Zur Umsetzung:
+%
+%    Auf die bayerische Sprache wird großen Wert gelegt
+%    Jede Szene ist eine eigene \section{sezenenname}
+%    Eine große Szene kann durch \subsection{teilszenenname} in mehrere Szenenabschnitte unterteilt werden.
+%    Am Anfang einer jeden Szene steht ein \paragraph{schauspieler} in dem die in der Szene vorkommenden Personen gelistet werden
+%
 %------------------------------------------------------------------------------
 \chapter{Drehbuch: Teil 2 - Füllung aus Blei}
-\section{Tony fährt in die Stadt}
+
+\subfile{szene_1.tex} % Tony fährt in die Stadt
+
 \end{document}
